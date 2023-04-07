@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>滚动框</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			height: 100px;
+			overflow: hidden;
+		}
+		.box {
+			width: 200px;
+			height: 100px;
+			background-color: lightblue;
+			text-align: center;
+			line-height: 100px;
+			font-size: 24px;
+			color: white;
+			animation: scroll 10s linear infinite;
+		}
+		@keyframes scroll {
+			from {
+				transform: translateX(0);
+			}
+			to {
+				transform: translateX(-100%);
+			}
+		}
+		button {
+			margin-top: 20px;
+			padding: 10px 20px;
+			background-color: lightblue;
+			border: none;
+			color: white;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			小王是笨蛋
+		</div>
+		<div class="box">
+			笨蛋最可爱
+		</div>
+	</div>
+	<button onclick="exit()">是</button>
+	<script>
+		function exit() {
+			window.close();
+		}
+	</script>
+</body>
+</html>
